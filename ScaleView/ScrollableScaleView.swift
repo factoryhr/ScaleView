@@ -103,9 +103,8 @@ open class ScrollableScaleView: UIView {
     override open func draw(_ rect: CGRect)
     {
         guard rect != CGRect.zero,
-            self.minValue < self.maxValue,
-            self.minValue > 0,
-            self.maxValue > 0,
+            self.minValue <= self.maxValue,
+            self.minValue >= 0,
             self.linesSpacing > 0
         else {
             
