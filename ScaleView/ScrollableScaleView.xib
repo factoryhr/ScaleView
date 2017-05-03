@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ScrollableScaleView" customModule="WeatherAppSwift" customModuleProvider="target">
+            <connections>
+                <outlet property="indicatorImageView" destination="y3i-Qq-yNh" id="ZEW-Xt-Be5"/>
+                <outlet property="indicatorImageViewWidthConstraint" destination="p5T-2J-LN9" id="FO4-0s-sL1"/>
+                <outlet property="scaleScrollView" destination="vmj-23-kL6" id="CzZ-bB-4pF"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clipsSubviews="YES" contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="148" height="40"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vmj-23-kL6">
+                    <rect key="frame" x="0.0" y="0.0" width="148" height="40"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="OlK-lg-Itn"/>
+                    </connections>
+                </scrollView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="y3i-Qq-yNh">
+                    <rect key="frame" x="73" y="0.0" width="1" height="40"/>
+                    <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="1" id="p5T-2J-LN9"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vmj-23-kL6" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="9dH-Te-LdJ"/>
+                <constraint firstAttribute="bottom" secondItem="vmj-23-kL6" secondAttribute="bottom" id="CZH-sY-CIT"/>
+                <constraint firstItem="y3i-Qq-yNh" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="IUT-Vt-hFx"/>
+                <constraint firstItem="y3i-Qq-yNh" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="LVN-zG-4fE"/>
+                <constraint firstItem="vmj-23-kL6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="bCz-Ho-Nfk"/>
+                <constraint firstAttribute="bottom" secondItem="y3i-Qq-yNh" secondAttribute="bottom" id="hZM-SX-Kn4"/>
+                <constraint firstAttribute="trailing" secondItem="vmj-23-kL6" secondAttribute="trailing" id="rjK-BW-YF3"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-144" y="-277"/>
+        </view>
+    </objects>
+</document>
